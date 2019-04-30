@@ -16,7 +16,7 @@ EXPOSE 8080
 
 # Run this command by default when containers spawned from this image start
 CMD curl https://notx.io/server.js > /srv/server.js
-CMD curl https://notx.io/Dockerfile_server > /srv/Dockerfile_server
+CMD curl https://notx.io/Dockerfile_server > /srv/Dockerfile
 CMD cd /srv/
 CMD npm install express
 CMD node server.js
