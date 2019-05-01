@@ -6,9 +6,8 @@ MAINTAINER Jonathan Rich <richj@oregonstate.edu>
 RUN apk -U add nodejs
 RUN apk -U add curl
 RUN apk -U add npm
-RUN curl https://notx.io/server.js > /srv/server.js
-RUN curl https://notx.io/Dockerfile_server > /srv/Dockerfile
-RUN cd /srv/
+RUN curl https://notx.io/server.js > server.js
+RUN curl https://notx.io/Dockerfile_server > Dockerfile
 RUN npm install express
 
 EXPOSE 8080
