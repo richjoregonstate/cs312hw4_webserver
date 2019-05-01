@@ -15,8 +15,8 @@ RUN apk -U add npm
 EXPOSE 8080
 
 # Run this command by default when containers spawned from this image start
-CMD curl https://notx.io/server.js > /srv/server.js
-CMD curl https://notx.io/Dockerfile_server > /srv/Dockerfile
-CMD cd /srv/
-CMD npm install express
+RUN curl https://notx.io/server.js > /srv/server.js
+RUN curl https://notx.io/Dockerfile_server > /srv/Dockerfile
+RUN cd /srv/
+RUN npm install express
 CMD node server.js
